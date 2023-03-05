@@ -4,13 +4,65 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Homework 10</title>
+    <title>Homework 11</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cuprum&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/node_modules/modern-normalize/modern-normalize.css">
   </head>
   <body>
-    <input type="text" id="search-box" />
-    <ul class="country-list"></ul>
-    <div class="country-info"></div>
+    <!-- container -->
+    <div class="container">
+      <!-- form -->
+      <div class="box-form">
 
-    <script src="index.js" type="module"></script>
+        <form class="search-form" id="search-form">
+          <input
+            class="search-input"
+            type="text"
+            name="searchQuery"
+            autocomplete="off"
+            placeholder="Search images..."
+          />
+
+          <span class="search-info-example"
+            >For example: <span class="search-example"></span>
+          </span>
+
+          <button class="search-form-btn" type="submit">
+            <svg width="20px" height="20px">
+              <use href="./images/icons.svg#icon-search-icon"></use>
+            </svg>
+          </button>
+        </form>
+      </div>
+      
+      <!-- gallery -->
+      <div class="gallery">
+      </div>
+      
+      <!-- loading animation -->
+      <div id="loading" class="loading-hidden"><span></span><span></span><span></span>
+      </div>
+
+      <!-- btn load more... -->
+      <button type="button" class="load-more button" data-action="load-more">
+        <span class="label">Load more</span>
+      </button>
+
+      <!-- when the content ended -->
+      <div class="info-text info-text-hidden" >
+        <span class="info-text-span">End of content</span>
+        <a class="button-to-start" href="#search-form">
+          <svg width="40px" height="60px">
+            <use href="./images/icons.svg#icon-arrow-up"></use>
+          </svg>
+        </a>
+      </div>
+
+      <!-- scroll pointer -->
+      <div id="sentinel"></div>
+    </div>
+    <script src="./index.js" type="module"></script>
   </body>
 </html>
