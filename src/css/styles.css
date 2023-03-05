@@ -211,7 +211,23 @@ p {
   }
 
   .gallery-info-list {
-    gap: 2px;
+    gap: 10px;
+  }
+
+  .gallery-info-text {
+    font-size: 12px;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 833px) {
+
+  .gallery-img {
+    max-width: 275px;
+    max-height: 170px;
+  }
+
+  .gallery-info-text {
+    font-size: 12px;
   }
 }
 
